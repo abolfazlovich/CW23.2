@@ -1,0 +1,23 @@
+Phase 2 — Game and Edition
+Create the Edition entity.
+
+Implement:
+Game 1 -------- N Edition
+
+Requirements:
+ Use @OneToMany and @ManyToOne.
+ A Game should be able to persist its Editions.
+ Deleting a Game should delete its Editions.
+ Removing an Edition from the Game's collection should delete it from the
+database.
+
+Use appropriate:
+cascade = ...
+orphanRemoval = true
+Test the following:
+Game
+├── Standard Edition
+├── Deluxe Edition
+└── Ultimate Edition
+Then remove one Edition from the collection and verify that it is deleted from
+the database.
